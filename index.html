@@ -1,142 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos básicos -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Perfect Tours - Tu Experiencia de Viaje Perfecta</title>
-    
-    <!-- Enlaces a hojas de estilo -->
-    <link rel="stylesheet" href="styless.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Tours - La esencia del Perú en cada tour</title>
+    <meta name="description" content="Perfect Tours: transporte turístico en todo el Perú. Traslados hotel/aeropuerto, city tours, viajes y eventos.">
+    <meta name="theme-color" content="#F7F5F2">
+
+    <!-- Vista previa al compartir (WhatsApp, Facebook). Ajuste la URL si cambia el nombre del repositorio -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Perfect Tours">
+    <meta property="og:description" content="La esencia del Perú en cada tour">
+    <meta property="og:image" content="https://perfecttours.github.io/tarjeta-perfect-tours/PTP.png">
+    <meta property="og:url" content="https://perfecttours.github.io/tarjeta-perfect-tours/">
+
+    <link rel="icon" type="image/png" href="./PTP.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Canvas para las partículas del fondo -->
-    <canvas id="particles"></canvas>
+<main class="card">
 
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Sección del perfil -->
-        <div class="profile">
-            <!-- Contenedor del logo con efectos -->
-            <div class="logo-container">
-                <img src="./PTP.png" alt="Perfect Tours Logo" class="logo">
-                <div class="logo-glow"></div>
-            </div>
-            <!-- Título y tagline -->
-            <h1 class="animated-text">PERFECT TOURS</h1>
-            <p class="tagline">La esencia del Perú en cada tour</p>
-        </div>
+    <header class="profile">
+        <img src="./PTP.webp" alt="Logo de Perfect Tours" class="logo" width="200" height="200">
+        <h1>PERFECT TOURS</h1>
+        <p class="tagline">La esencia del Perú en cada tour</p>
+    </header>
 
-        <!-- Sección de enlaces principales -->
-        <div class="links">
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/PerfectToursPeru/" class="link-card" data-tilt>
-                <i class="fab fa-facebook"></i>
-                <span>Facebook</span>
-                <div class="card-glow"></div>
-            </a>
-            
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/perfecttours.pe/" class="link-card" data-tilt>
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
-                <div class="card-glow"></div>
-            </a>
-            
-            <!-- Tiktoks -->
-            <a href="https://www.tiktok.com/@perfecttours.pe" class="link-card" data-tilt>
-                <i class="fab fa-tiktok"></i>
-                <span>Tiktok</span>
-                <div class="card-glow"></div>
-            </a>
-            
-            <!-- Whatsapp -->
-            <a href="https://wa.me/51974223785?text=Hola, me gustaría recibir información sobre los servicios de transporte turístico que brinda Perfect Tours, así como las opciones disponibles y sus tarifas." class="link-card" data-tilt>
-                <i class="fab fa-whatsapp"></i>
-                <span>Whatsapp</span>
-                <div class="card-glow"></div>
-            </a>
-        </div>
+    <!-- Contacto directo -->
+    <section class="actions" aria-label="Contacto">
+        <a class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer"
+           href="https://wa.me/51974223785?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20transporte%20tur%C3%ADstico%20que%20brinda%20Perfect%20Tours%2C%20as%C3%AD%20como%20las%20opciones%20disponibles%20y%20sus%20tarifas.">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Escribir por WhatsApp
+        </a>
+        <a class="btn" href="tel:+51974223785"><i class="fas fa-phone" aria-hidden="true"></i> Llamar</a>
+        <a class="btn" href="mailto:reservas@perfecttours.pe"><i class="fas fa-envelope" aria-hidden="true"></i> Correo</a>
+        <a class="btn" href="https://maps.app.goo.gl/9eMLZxEoPfiJoLRr5" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-dot" aria-hidden="true"></i> Ubicación</a>
+        <a class="btn" href="https://www.perfecttours.pe" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> Sitio web</a>
+        <a class="btn btn-full" href="perfecttours.vcf" download><i class="fas fa-address-book" aria-hidden="true"></i> Guardar contacto</a>
+    </section>
 
+    <!-- Redes -->
+    <nav class="social" aria-label="Redes sociales">
+        <a href="https://www.facebook.com/PerfectToursPeru/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+        <a href="https://www.instagram.com/perfecttours.pe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        <a href="https://www.tiktok.com/@perfecttours.pe" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i><span>TikTok</span></a>
+    </nav>
 
-    <script>
-        // Inicialización del efecto tilt en las tarjetas
-        VanillaTilt.init(document.querySelectorAll(".link-card"), {
-            max: 15,
-            speed: 300,
-            glare: true,
-            "max-glare": 0.9,
+    <!-- Servicios -->
+    <section class="services" aria-labelledby="t-serv">
+        <h2 id="t-serv">Nuestros servicios</h2>
+        <details>
+            <summary><i class="fas fa-bus" aria-hidden="true"></i> Transporte Nacional</summary>
+            <p>Ofrecemos un servicio de transporte en todo el Perú, cubriendo todos los destinos turísticos con la comodidad y el profesionalismo que nuestros clientes esperan.</p>
+        </details>
+        <details>
+            <summary><i class="fas fa-plane-arrival" aria-hidden="true"></i> Traslados Hotel / Aeropuerto</summary>
+            <p>Facilitamos traslados seguros y puntuales desde y hacia el aeropuerto y los hoteles, garantizando un inicio y final de viaje sin complicaciones.</p>
+        </details>
+        <details>
+            <summary><i class="fas fa-city" aria-hidden="true"></i> City Tours</summary>
+            <p>Están diseñados para explorar lo mejor de cada ciudad, brindando una experiencia enriquecedora con comodidad y estilo.</p>
+        </details>
+        <details>
+            <summary><i class="fas fa-champagne-glasses" aria-hidden="true"></i> Viajes y Eventos</summary>
+            <p>Organizamos transporte para todo tipo de eventos y viajes grupales, desde conferencias hasta bodas, adaptándonos a las necesidades específicas de cada cliente.</p>
+        </details>
+    </section>
+
+    <!-- Código QR de esta misma página -->
+    <section class="qr" id="qr-box" aria-labelledby="t-qr" hidden>
+        <h2 id="t-qr">Comparta esta tarjeta</h2>
+        <div id="qr"></div>
+    </section>
+
+    <footer>© Perfect Tours</footer>
+</main>
+
+<!-- Generador de QR (versión fija). Si no carga, la sección del QR queda oculta -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+    if (window.QRCode) {
+        new QRCode(document.getElementById('qr'), {
+            text: location.href.split('#')[0],
+            width: 160, height: 160,
+            colorDark: '#2b2b2b', colorLight: '#ffffff'
         });
-
-        // Configuración del canvas de partículas
-        const canvas = document.getElementById('particles');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Array para almacenar las partículas
-        let particles = [];
-        const numberOfParticles = 20; // Número reducido de partículas
-
-        // Clase para crear partículas
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 5 + 1;
-                this.speedX = Math.random() * 3 - 1.5;
-                this.speedY = Math.random() * 3 - 1.5;
-            }
-
-            // Actualizar posición de la partícula
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                // Mantener las partículas dentro del canvas
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-            }
-
-            // Dibujar la partícula
-            draw() {
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        // Inicializar partículas
-        function init() {
-            for (let i = 0; i < numberOfParticles; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        // Función de animación
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-            }
-            requestAnimationFrame(animate);
-        }
-
-        // Iniciar animación
-        init();
-        animate();
-
-        // Ajustar canvas al tamaño de la ventana
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+        document.getElementById('qr-box').hidden = false;
+    }
+</script>
 </body>
 </html>
-
