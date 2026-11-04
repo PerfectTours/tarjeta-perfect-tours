@@ -62,16 +62,24 @@ button.btn { font-family: inherit; cursor: pointer; }
 .btn-primary i { color: var(--texto); font-size: 1.2rem; }
 .btn-primary:hover { background: #e68100; border-color: #e68100; }
 
-/* Redes */
-.social { display: flex; justify-content: center; gap: 28px; margin: 24px 0 8px; }
-.social a { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--gris); text-decoration: none; font-size: 0.75rem; }
-.social i {
-    width: 46px; height: 46px; border-radius: 50%;
-    display: grid; place-items: center; font-size: 1.2rem;
-    background: #fff; border: 1px solid var(--borde); color: var(--texto);
-    transition: background 0.2s, border-color 0.2s;
+/* Redes: solo logotipos, con los colores de cada marca */
+.social { display: flex; justify-content: center; gap: 22px; margin: 24px 0 8px; }
+.social a {
+    width: 56px; height: 56px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: #fff; border: 1px solid var(--borde);
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
-.social a:hover i { background: var(--naranja); border-color: var(--naranja); }
+.social a:hover { background: #FFF1DC; border-color: var(--naranja); transform: translateY(-2px); }
+.social i { font-size: 1.7rem; line-height: 1; }
+.social-fb i { color: #0866FF; }
+.social-ig i {
+    background: linear-gradient(45deg, #FEDA75 0%, #FA7E1E 25%, #D62976 50%, #962FBF 75%, #4F5BD5 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+}
+.social-tt i { color: #000; text-shadow: -1.5px -1.5px 0 #25F4EE, 1.5px 1.5px 0 #FE2C55; }
 
 /* Servicios */
 .services { margin-top: 24px; border-top: 1px solid var(--borde); padding-top: 18px; }
@@ -102,7 +110,8 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--naranja); outl
     .btn { font-size: 1rem; padding: 14px 12px; }
     .btn-primary { font-size: 1.1rem; padding: 16px; }
     .social { gap: 36px; }
-    .social i { width: 52px; height: 52px; font-size: 1.3rem; }
+    .social a { width: 62px; height: 62px; }
+    .social i { font-size: 1.9rem; }
     summary { font-size: 1rem; }
     details p { font-size: 0.95rem; }
 }
