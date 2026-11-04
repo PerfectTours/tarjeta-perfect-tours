@@ -51,6 +51,7 @@ h1 { font-size: clamp(1.4rem, 6.5vw, 1.7rem); font-weight: 700; letter-spacing: 
     transition: background 0.2s, border-color 0.2s;
 }
 .btn i { color: var(--gris); }
+button.btn { font-family: inherit; cursor: pointer; }
 .btn:hover { background: #faf7f2; border-color: var(--naranja); }
 .btn-full { grid-column: 1 / -1; }
 .btn-primary { background: var(--naranja); border-color: var(--naranja); font-weight: 600; font-size: 1rem; padding: 14px; }
@@ -63,10 +64,10 @@ h1 { font-size: clamp(1.4rem, 6.5vw, 1.7rem); font-weight: 700; letter-spacing: 
 .social i {
     width: 46px; height: 46px; border-radius: 50%;
     display: grid; place-items: center; font-size: 1.2rem;
-    background: var(--naranja); border: 1px solid var(--naranja); color: var(--texto);
+    border: 1px solid var(--borde); color: var(--texto);
     transition: background 0.2s, border-color 0.2s;
 }
-.social a:hover i { background: #e68100; border-color: #e68100; }
+.social a:hover i { background: var(--naranja); border-color: var(--naranja); }
 
 /* Servicios */
 .services { margin-top: 24px; border-top: 1px solid var(--borde); padding-top: 18px; }

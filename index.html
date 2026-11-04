@@ -32,14 +32,15 @@
     <!-- Contacto directo -->
     <section class="actions" aria-label="Contacto">
         <a class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer"
-           href="https://wa.me/51974223785?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20transporte%20tur%C3%ADstico%20que%20brinda%20Perfect%20Tours%2C%20as%C3%AD%20como%20las%20opciones%20disponibles%20y%20sus%20tarifas.">
+           href="https://wa.me/51974223785?text=%C2%A1Hola%2C%20Perfect%20Tours%21%20Estoy%20interesado%28a%29%20en%20conocer%20sus%20servicios%20de%20transporte%20tur%C3%ADstico.%20Me%20gustar%C3%ADa%20conversar%20con%20ustedes%20y%20poder%20coordinar.">
             <i class="fab fa-whatsapp" aria-hidden="true"></i> Escribir por WhatsApp
         </a>
         <a class="btn" href="tel:+51974223785"><i class="fas fa-phone" aria-hidden="true"></i> Llamar</a>
         <a class="btn" href="mailto:reservas@perfecttours.pe"><i class="fas fa-envelope" aria-hidden="true"></i> Correo</a>
         <a class="btn" href="https://maps.app.goo.gl/9eMLZxEoPfiJoLRr5" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-dot" aria-hidden="true"></i> Ubicación</a>
         <a class="btn" href="https://www.perfecttours.pe" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> Sitio web</a>
-        <a class="btn btn-full" href="perfecttours.vcf" download><i class="fas fa-address-book" aria-hidden="true"></i> Guardar contacto</a>
+        <a class="btn" href="perfecttours.vcf" download><i class="fas fa-address-book" aria-hidden="true"></i> Guardar contacto</a>
+        <button type="button" class="btn" id="btn-compartir"><i class="fas fa-share-nodes" aria-hidden="true"></i> <span>Compartir</span></button>
     </section>
 
     <!-- Redes -->
@@ -74,5 +75,26 @@
     <footer>© Perfect Tours</footer>
 </main>
 
+<script>
+    // Botón Compartir: menú nativo del celular; si no existe, copia el enlace
+    (function () {
+        var btn = document.getElementById('btn-compartir');
+        var txt = btn.querySelector('span');
+        var url = location.href.split('#')[0];
+        btn.addEventListener('click', function () {
+            if (navigator.share) {
+                navigator.share({ title: 'Perfect Tours', text: '“La esencia del Perú en cada tour”', url: url }).catch(function () {});
+                return;
+            }
+            var manual = function () { window.prompt('Copie el enlace:', url); };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(function () {
+                    txt.textContent = '¡Enlace copiado!';
+                    setTimeout(function () { txt.textContent = 'Compartir'; }, 2000);
+                }, manual);
+            } else { manual(); }
+        });
+    })();
+</script>
 </body>
 </html>
