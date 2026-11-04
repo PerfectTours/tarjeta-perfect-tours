@@ -26,7 +26,7 @@
 
     <header class="profile">
         <h1>PERFECT TOURS</h1>
-        <p class="tagline">La esencia del Perú en cada tour</p>
+        <p class="tagline">“La esencia del Perú en cada tour”</p>
     </header>
 
     <!-- Contacto directo -->
@@ -54,42 +54,25 @@
         <h2 id="t-serv">Nuestros servicios</h2>
         <details>
             <summary><i class="fas fa-bus" aria-hidden="true"></i> Transporte Nacional</summary>
-            <p>Ofrecemos un servicio de transporte en todo el Perú, cubriendo todos los destinos turísticos con la comodidad y el profesionalismo que nuestros clientes esperan.</p>
+            <p>Conectamos todos los destinos turísticos del Perú con unidades modernas, conductores profesionales y un servicio puntual, seguro y confortable, con autorización del MTC.</p>
         </details>
         <details>
             <summary><i class="fas fa-plane-arrival" aria-hidden="true"></i> Traslados Hotel / Aeropuerto</summary>
-            <p>Facilitamos traslados seguros y puntuales desde y hacia el aeropuerto y los hoteles, garantizando un inicio y final de viaje sin complicaciones.</p>
+            <p>Brindamos traslados puntuales y seguros desde y hacia el aeropuerto, hoteles y terminales, con unidades modernas y conductores profesionales, para que su viaje comience y termine sin contratiempos.</p>
         </details>
         <details>
             <summary><i class="fas fa-city" aria-hidden="true"></i> City Tours</summary>
-            <p>Están diseñados para explorar lo mejor de cada ciudad, brindando una experiencia enriquecedora con comodidad y estilo.</p>
+            <p>Recorridos diseñados para descubrir lo mejor de cada ciudad, combinando historia, cultura y atractivos principales en unidades cómodas y con conductores profesionales.</p>
         </details>
         <details>
             <summary><i class="fas fa-champagne-glasses" aria-hidden="true"></i> Viajes y Eventos</summary>
-            <p>Organizamos transporte para todo tipo de eventos y viajes grupales, desde conferencias hasta bodas, adaptándonos a las necesidades específicas de cada cliente.</p>
+            <p>Ofrecemos transporte para viajes grupales y eventos de todo tipo, desde conferencias hasta bodas, con unidades cómodas, conductores profesionales y un servicio adaptado a las necesidades de cada cliente.</p>
         </details>
     </section>
 
-    <!-- Código QR de esta misma página -->
-    <section class="qr" id="qr-box" aria-labelledby="t-qr" hidden>
-        <h2 id="t-qr">Comparta esta tarjeta</h2>
-        <div id="qr"></div>
-    </section>
 
     <footer>© Perfect Tours</footer>
 </main>
 
-<!-- Generador de QR (versión fija). Si no carga, la sección del QR queda oculta -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
-    if (window.QRCode) {
-        new QRCode(document.getElementById('qr'), {
-            text: location.href.split('#')[0],
-            width: 160, height: 160,
-            colorDark: '#2b2b2b', colorLight: '#ffffff'
-        });
-        document.getElementById('qr-box').hidden = false;
-    }
-</script>
 </body>
 </html>

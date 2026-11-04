@@ -36,13 +36,14 @@ body {
 
 /* Perfil */
 .profile { text-align: center; margin-bottom: 22px; }
-h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: 0.06em; margin-top: 6px; }
-.tagline { color: var(--gris); font-size: 0.95rem; margin-top: 4px; }
+h1 { font-size: clamp(1.4rem, 6.5vw, 1.7rem); font-weight: 700; letter-spacing: 0.06em; margin-top: 6px; }
+.tagline { color: var(--gris); font-size: 0.82rem; font-style: italic; margin-top: 4px; }
 .profile::after { content: ''; display: block; width: 48px; height: 3px; background: var(--naranja); border-radius: 2px; margin: 16px auto 0; }
 
 /* Botones */
 .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .btn {
+    min-width: 0; text-align: center;
     display: flex; align-items: center; justify-content: center; gap: 8px;
     padding: 12px 10px; border-radius: 12px;
     border: 1px solid var(--borde); background: #fff;
@@ -62,10 +63,10 @@ h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: 0.06em; margin-top: 6p
 .social i {
     width: 46px; height: 46px; border-radius: 50%;
     display: grid; place-items: center; font-size: 1.2rem;
-    border: 1px solid var(--borde); color: var(--texto);
+    background: var(--naranja); border: 1px solid var(--naranja); color: var(--texto);
     transition: background 0.2s, border-color 0.2s;
 }
-.social a:hover i { background: var(--naranja); border-color: var(--naranja); }
+.social a:hover i { background: #e68100; border-color: #e68100; }
 
 /* Servicios */
 .services { margin-top: 24px; border-top: 1px solid var(--borde); padding-top: 18px; }
@@ -81,12 +82,37 @@ summary::after { content: '+'; margin-left: auto; color: var(--gris); font-size:
 details[open] summary::after { content: '–'; }
 details p { color: var(--gris); font-size: 0.88rem; line-height: 1.6; padding: 0 2px 14px 34px; }
 
-/* QR */
-.qr { text-align: center; margin-top: 22px; }
-.qr[hidden] { display: none; }
-#qr { display: inline-block; padding: 10px; background: #fff; border: 1px solid var(--borde); border-radius: 12px; line-height: 0; }
-
 footer { text-align: center; color: var(--gris); font-size: 0.75rem; margin-top: 22px; }
 
 a:focus-visible, summary:focus-visible { outline: 3px solid var(--naranja); outline-offset: 2px; border-radius: 8px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ---------- Responsive ---------- */
+/* Tablet y escritorio: tarjeta más ancha y elementos más grandes */
+@media (min-width: 768px) {
+    body { padding: 40px 20px; }
+    .card { max-width: 560px; padding: 44px 40px 26px; }
+    h1 { font-size: 2rem; }
+    .tagline { font-size: 0.95rem; }
+    .btn { font-size: 1rem; padding: 14px 12px; }
+    .btn-primary { font-size: 1.1rem; padding: 16px; }
+    .social { gap: 36px; }
+    .social i { width: 52px; height: 52px; font-size: 1.3rem; }
+    summary { font-size: 1rem; }
+    details p { font-size: 0.95rem; }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 360px) {
+    body { padding: 12px 8px; }
+    .card { padding: 26px 14px 16px; border-radius: 16px; }
+    .actions { grid-template-columns: 1fr; }
+    .social { gap: 18px; }
+    details p { padding-left: 2px; }
+}
+
+/* Celular en horizontal: se alinea arriba para poder desplazarse */
+@media (max-height: 520px) and (orientation: landscape) {
+    body { align-items: flex-start; }
+    .card { align-self: flex-start; }
+}
