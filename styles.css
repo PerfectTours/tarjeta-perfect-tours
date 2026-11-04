@@ -52,6 +52,10 @@ h1 { font-size: clamp(1.4rem, 6.5vw, 1.7rem); font-weight: 700; letter-spacing: 
 }
 .btn i { color: var(--gris); }
 button.btn { font-family: inherit; cursor: pointer; }
+
+/* Botón Compartir al final */
+.share { margin-top: 22px; }
+.share .btn { width: 100%; }
 .btn:hover { background: #faf7f2; border-color: var(--naranja); }
 .btn-full { grid-column: 1 / -1; }
 .btn-primary { background: var(--naranja); border-color: var(--naranja); font-weight: 600; font-size: 1rem; padding: 14px; }
@@ -64,7 +68,7 @@ button.btn { font-family: inherit; cursor: pointer; }
 .social i {
     width: 46px; height: 46px; border-radius: 50%;
     display: grid; place-items: center; font-size: 1.2rem;
-    border: 1px solid var(--borde); color: var(--texto);
+    background: #fff; border: 1px solid var(--borde); color: var(--texto);
     transition: background 0.2s, border-color 0.2s;
 }
 .social a:hover i { background: var(--naranja); border-color: var(--naranja); }
